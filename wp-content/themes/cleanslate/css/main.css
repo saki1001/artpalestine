@@ -1,0 +1,695 @@
+
+/* Structure
+-------------------------------------------------------------- */
+/*Clearfixing main elements*/
+body:before,
+body:after,
+#page:before,
+#page:after {
+    content:"";
+    display:table;
+}
+body:after,
+#page:after {
+    clear:both;
+}
+body,
+#page {
+    zoom:1; /* For IE 6/7 (trigger hasLayout) */
+}
+
+* {
+    margin: 0;
+}
+html, body {
+    height: 100%;
+}
+
+body {
+    font-family: 'Muli-Regular', Helvetica, Arial, sans-serif;
+    font-size: 62.5%;
+    line-height: 1;
+    color: #333333;
+    position: relative;
+    background-color: #F4F4F4;
+}
+
+#page {
+    width: 950px;
+    min-height: 100%;
+    height: auto !important;
+    height: 100%;
+    position: relative;
+    margin: 0 auto -185px; /* the bottom margin is the negative value of the footer's height */;
+    padding: 0 52px;
+}
+
+/*
+Sticky Footer by Ryan Fait
+http://ryanfait.com/
+*/
+
+#footer, .push {
+    height: 185px; /* .push must be the same height as .footer */
+}
+
+.push {
+    width: 100%;
+    overflow: hidden; /*clearfix*/
+}
+
+#footer {
+    width: 950px;
+    text-align: right;
+    font-size: 1.6em;
+    margin: 0 auto;
+}
+
+#footer div {
+    padding: 150px 0 10px;
+}
+
+header,
+#main {
+    width: 950px;
+    float: left;
+}
+
+/* Text meant only for screen readers */
+.screen-reader-text,
+.assistive-text {
+    position: absolute !important;
+    clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+    clip: rect(1px, 1px, 1px, 1px);
+}
+
+/* Alignment */
+.alignleft {
+    display: inline;
+    float: left;
+}
+.alignright {
+    display: inline;
+    float: right;
+}
+.aligncenter {
+    clear: both;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Links
+-------------------------------------------------------------- */
+a, a:link, a:visited {
+    color: #333333;
+    text-decoration: none;
+}
+
+a:active, a:hover {
+    color: #006699;
+    text-decoration: none;
+}
+
+
+/* Headers
+-------------------------------------------------------------- */
+h1, h2, h3, h4, h5 {
+    font-weight: normal;
+}
+
+/* Header
+-------------------------------------------------------------- */
+header {
+    position: relative;
+    padding: 30px 0;
+}
+
+header #logo {
+    position: absolute;
+    max-width: 250px;
+}
+
+header h1 {
+    font-size: 2.8em;
+    font-weight: bold;
+    width: 100%;
+    padding-top: 10px;
+}
+
+header h1 a {
+/*    opacity: 0;*/
+    display: block;
+    width: 100%;
+}
+
+/* Menu
+-------------------------------------------------------------- */
+#main-menu {
+    display: block;
+    font-size: 1.8em;
+    line-height: 1.2;
+    float: right;
+    padding-top: 40px;
+}
+
+#main-menu .menu-main-container {
+    float: left;
+}
+
+#main-menu #menu-main {
+    margin-right: 20px;
+    float: right;
+}
+
+#main-menu #search {
+/*    width: 200px;*/
+    margin-top: 4px;
+    float: right;
+}
+
+#main-menu li {
+    float: left;
+    position: relative;
+}
+
+#main-menu a {
+    display: block;
+    line-height: 2em;
+    padding: 0 0 0 1.75em;
+    text-decoration: none;
+    background-color: #F4F4F4;
+}
+
+#main-menu ul ul {
+    border-top: solid #CCCCCC 1px;
+    -webkit-box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+       -moz-box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    -webkit-border-radius: 0 0 10px 10px;
+       -moz-border-radius: 0 0 10px 10px;
+            border-radius: 0 0 10px 10px;
+    padding-bottom: .5em;
+    background-color: #FFFFFF;
+    display: none;
+    position: absolute;
+    top: 2em;
+    left: 1.75em;
+    z-index: 99999;
+}
+
+#main-menu ul ul ul {
+    left: 100%;
+    top: 0;
+}
+#main-menu ul ul a {
+    line-height: 1.2em;
+    padding: .5em .5em .5em 1em;
+    width: 14em;
+    height: auto;
+    background-color: #FFFFFF;
+}
+#main-menu li:hover > a {
+    background-color: #F4F4F4;
+}
+#main-menu ul ul :hover > a {
+    background-color: #FFFFFF;
+}
+#main-menu ul ul a:hover {
+    background-color: #FFFFFF;
+}
+#main-menu ul li:hover > ul {
+    display: block;
+}
+
+/*Highlight current menu item*/
+#main-menu .current-menu-item a,
+#main-menu .current-menu-ancestor a,
+#main-menu .current-post-ancestor a {
+    color: #006699;
+}
+
+#main-menu .current-menu-item .sub-menu a,
+#main-menu .current-menu-ancestor ul li a,
+#main-menu .current-post-ancestor ul li a {
+    color: #666;
+}
+
+#main-menu .current-menu-item .sub-menu a:hover,
+#main-menu .current-menu-ancestor ul li a:hover,
+#main-menu .current-post-ancestor ul li a:hover {
+    color: #006699;
+}
+
+#main-menu .current-menu-ancestor ul li.current-menu-item a,
+#main-menu .current-post-ancestor ul li.current-post-parent a {
+    color: #006699;
+}
+
+
+/* General
+-------------------------------------------------------------- */
+#main #content article {
+    position: relative;
+}
+
+#main #content article .border {
+    width: 20px;
+    height: 20px;
+    background-color: #FAAAAA;
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    z-index: 2;
+}
+
+#main h2 {
+    font-size: 2.2em;
+    line-height: 1.2;
+    padding-bottom: 15px;
+    width: 100%;
+    font-weight: normal;
+}
+
+#main #content blockquote {
+    font-family: 'Muli-Italic', Helvetica, Arial, sans-serif;
+    margin: 0 50px;
+    color: #999999;
+}
+
+/* Sidebar
+-------------------------------------------------------------- */
+#main #sidebar {
+    width: 200px;
+}
+
+#main #sidebar ul {
+    font-size: 1.5em;
+}
+
+#main #sidebar ul li {
+    margin-bottom: 15px;
+    line-height: 1.2;
+}
+
+#main #sidebar ul li.current a {
+    color: #006699;
+}
+
+#main #sidebar ul li.current a:hover {
+    cursor: default;
+}
+
+#sidebar.featured {
+    width: 200px;
+    float: right;
+}
+
+#sidebar.featured .article {
+    padding-top: 12px;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    background-color: #FFFFFF;
+    border-right: solid 2px #CCCCCC;
+    border-bottom: solid 3px #CCCCCC;
+    border-bottom-right-radius: 10px;
+    float: left;
+}
+
+/* Home
+-------------------------------------------------------------- */
+body.home #content {
+    margin: 0;
+    position: relative;
+}
+
+#main #content #articles {
+    width: 100%;
+    position: relative;
+}
+
+#main #content #articles .article {
+    width: 224px;
+    padding-top: 12px;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    background-color: #FFFFFF;
+    border-right: solid 2px #CCCCCC;
+    border-bottom: solid 3px #CCCCCC;
+    border-bottom-right-radius: 10px;
+    word-wrap: break-word;
+    position: relative;
+    z-index: 20;
+}
+
+#main #content #articles .article h2,
+#main #content #articles .article h4,
+#main #content #articles .article ul,
+#main #content #articles .article p,
+#main #content #articles .article figure {
+    padding-left: 12px;
+    padding-right: 12px;
+}
+
+#main #content #articles .article h4 {
+    font-size: 1.8em;
+    line-height: 1.4;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+#main #content #articles .article p {
+    font-size: 1.2em;
+    line-height: 1.3;
+    margin-bottom: 5px;
+}
+
+#main #content #description.article p {
+    font-size: 1.4em;
+    margin-bottom: 20px;
+}
+
+#main #content #articles .article figure,
+#main #content #articles .article figure img {
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+#main #content #articles .article .border {
+    width: 10px;
+    height: 10px;
+    background-color: #CCCCCC;
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    z-index: -1;
+/*    margin-top: 15px;*/
+/*    border-bottom: solid 4px #DC143C;*/
+/*    border-bottom: solid 4px #CCCCCC;*/
+}
+
+#main #content #articles #description.article .border,
+#main #content #articles #sidebar.article .border {
+    background-color: #FAAAAA;
+}
+
+#main #content #articles .article .border.thin {
+    margin-top: 0;
+/*    border-bottom: dashed 2px #00BFFF;*/
+/*    border-bottom: solid 4px #CCCCCC;*/
+}
+
+/* Page Template
+-------------------------------------------------------------- */
+body.page #content article {
+    width: 890px;
+    padding: 20px 30px 50px;
+    background-color: #FFFFFF;
+    border-bottom-right-radius: 20px;
+    border-right: solid 2px #CCCCCC;
+    border-bottom: solid 3px #CCCCCC;
+    float: left;
+}
+
+body.page #content article.no-image {
+    width: 750px;
+}
+
+body.page #content article h3 {
+    font-size: 2em;
+    font-weight: normal;
+    line-height: 1.2;
+    margin-top: 20px;
+    margin-bottom: 5px;
+}
+
+body.page #content article p {
+    font-size: 1.8em;
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+body.page #content article.no-image p {
+    margin-bottom: 20px;
+}
+
+body.page #content article ul {
+    font-size: 1.8em;
+}
+
+body.page #content article ul li {
+    margin-bottom: 20px;
+}
+
+body.page #content figure {
+    width: 350px;
+    text-align: right;
+    float: left;
+    -webkit-border-radius: 10px;
+       -moz-border-radius: 10px;
+            border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+body.page #content figure img {
+    visibility: hidden;
+}
+
+body.page #content figcaption {
+    width: 350px;
+    margin-bottom: 25px;
+    font-size: 1.3em;
+    font-family: 'Muli-Italic', Helvetica, Arial, sans-serif;
+    float: left;
+}
+
+
+/* Pagination
+-------------------------------------------------------------- */
+#content .list-footer {
+    width: 100%;
+    font-size: 1.6em;
+    line-height: 1.2;
+}
+
+#content .list-footer .current {
+    color:#006699;
+}
+
+
+/* Single Post General
+-------------------------------------------------------------- */
+body.single #content {
+    width: 100%;
+}
+
+body.single #content article {
+    width: 640px;
+    padding: 20px 30px 50px;
+    margin-right: 48px;
+    background-color: #FFFFFF;
+    border-bottom-right-radius: 20px;
+    border-right: solid 2px #CCCCCC;
+    border-bottom: solid 3px #CCCCCC;
+    float: left;
+}
+
+body.single #content article .post-header {
+    margin-bottom: 20px;
+}
+
+body.single #content article .post-date {
+    font-size: 1.4em;
+}
+
+body.single #content article .text-container p {
+    font-size: 1.6em;
+    line-height: 1.3;
+    max-width: 750px;
+    margin: 0 0 20px 0;
+}
+
+body.single #content ul {
+    font-size: 1.6em;
+    line-height: 1.3;
+}
+
+body.single #content ul li {
+    margin-bottom: 10px;
+}
+
+
+/* Content No Found
+-------------------------------------------------------------- */
+#content .not-found {
+    font-size: 1.6em;
+}
+
+/* Content
+-------------------------------------------------------------- */
+
+.sticky {
+}
+.entry-meta {
+    clear: both;
+    display: block;
+}
+.single-author .entry-meta .byline {
+    display: none;
+}
+#content nav {
+    display: block;
+    overflow: hidden;
+}
+#content nav .nav-previous {
+    float: left;
+    width: 50%;
+}
+#content nav .nav-next {
+    float: right;
+    text-align: right;
+    width: 50%;
+}
+#content #nav-above {
+    display: none;
+}
+.paged #content #nav-above,
+.single #content #nav-above {
+    display: block;
+}
+#nav-below {
+    margin: 1em 0 0;
+}
+.page-link {
+    clear: both;
+    margin: 0 0 1em;
+}
+.page .edit-link {
+    clear: both;
+    display: block;
+    font-size: 1.4em;
+}
+
+/* 404 page */
+.error404 .widget {
+    float: left;
+    width: 33%;
+}
+.error404 .widget .widgettitle,
+.error404 .widget ul {
+    margin-right: 1em;
+}
+.error404 .widget_tag_cloud {
+    clear: both;
+    float: none;
+    width: 100%;
+}
+
+
+/* Image Attachments */
+.image-attachment div.entry-meta {
+    float: left;
+}
+.image-attachment nav {
+    float: right;
+    margin: 0 0 1em 0;
+}
+.image-attachment .entry-content {
+    clear: both;
+}
+.image-attachment .entry-content .entry-attachment {
+    background: #eee;
+    margin: 0 0 1em;
+    padding: 1em;
+    text-align: center;
+}
+.image-attachment .entry-content .attachment {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+}
+
+/* Aside Posts */
+.format-aside .entry-header {
+    display: none;
+}
+.single .format-aside .entry-header {
+    display: block;
+}
+.format-aside .entry-content,
+.format-aside .entry-summary {
+    padding-top: 1em;
+}
+.single .format-aside .entry-content,
+.single .format-aside .entry-summary {
+    padding-top: 0;
+}
+
+/* Gallery Posts */
+.format-gallery .gallery-thumb {
+    float: left;
+    margin: 0 1em 0 0;
+}
+
+/* Image Posts */
+.format-image .entry-header {
+    display: none;
+}
+.single .format-image .entry-header {
+    display: block;
+}
+.format-image .entry-content,
+.format-image .entry-summary {
+    padding-top: 1em;
+}
+.single .format-image .entry-content,
+.single .format-image .entry-summary {
+    padding-top: 0;
+}
+
+
+/* Images
+-------------------------------------------------------------- */
+
+a img {
+    border: none;
+}
+p img {
+    margin-bottom: 0.5em; /* a small bottom margin prevents content floating under images */
+}
+/*
+Resize images to fit the main content area.
+- Applies only to images uploaded via WordPress by targeting size-* classes.
+- Other images will be left alone. Use "size-auto" class to apply to other images.
+*/
+img.size-auto,
+img.size-full,
+img.size-large,
+img.size-medium,
+.attachment img,
+.widget-area img,
+.wp-caption {
+    max-width: 100%; /* When images are too wide for containing element, force them to fit. */
+    height: auto; /* Override height to match resized width for correct aspect ratio. */
+}
+img.alignleft {
+    margin-right: 1em;
+}
+img.alignright {
+    margin-left: 1em;
+}
+.wp-caption {
+    padding: .5em;
+    text-align: center;
+}
+.wp-caption img {
+    margin: .25em;
+}
+.wp-caption .wp-caption-text {
+    margin: .5em;
+}
+.gallery-caption {
+}
+.wp-smiley {
+    margin: 0;
+}

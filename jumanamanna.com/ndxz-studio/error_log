@@ -1,0 +1,14 @@
+[17-Jun-2011 12:05:36] PHP Warning:  POST Content-Length of 119124749 bytes exceeds the limit of 8388608 bytes in Unknown on line 0
+[12-Dec-2011 20:08:16] PHP Warning:  imagecreatefromjpeg() [<a href='function.imagecreatefromjpeg'>function.imagecreatefromjpeg</a>]: gd-jpeg: JPEG library reports unrecoverable error:  in /home/apiweb/public_html/jumanamanna.com/ndxz-studio/lib/media.php on line 214
+[12-Dec-2011 20:08:16] PHP Warning:  imagecreatefromjpeg() [<a href='function.imagecreatefromjpeg'>function.imagecreatefromjpeg</a>]: '/home/apiweb/public_html/jumanamanna.com/files/gimgs//5_ayman-3.jpg' is not a valid JPEG file in /home/apiweb/public_html/jumanamanna.com/ndxz-studio/lib/media.php on line 214
+[12-Dec-2011 20:08:16] PHP Warning:  imagedestroy(): supplied argument is not a valid Image resource in /home/apiweb/public_html/jumanamanna.com/ndxz-studio/lib/media.php on line 118
+[12-Dec-2011 20:08:16] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/apiweb/public_html/jumanamanna.com/ndxz-studio/lib/media.php:214) in /home/apiweb/public_html/jumanamanna.com/ndxz-studio/lib/template.php on line 65
+[12-Dec-2011 20:19:15] PHP Warning:  imagecreatefromjpeg() [<a href='function.imagecreatefromjpeg'>function.imagecreatefromjpeg</a>]: gd-jpeg: JPEG library reports unrecoverable error:  in /home/apiweb/public_html/jumanamanna.com/ndxz-studio/lib/media.php on line 214
+[12-Dec-2011 20:19:15] PHP Warning:  imagecreatefromjpeg() [<a href='function.imagecreatefromjpeg'>function.imagecreatefromjpeg</a>]: '/home/apiweb/public_html/jumanamanna.com/files/gimgs//5_fadlabi2.jpg' is not a valid JPEG file in /home/apiweb/public_html/jumanamanna.com/ndxz-studio/lib/media.php on line 214
+[12-Dec-2011 20:19:15] PHP Warning:  imagedestroy(): supplied argument is not a valid Image resource in /home/apiweb/public_html/jumanamanna.com/ndxz-studio/lib/media.php on line 118
+[12-Dec-2011 20:19:15] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/apiweb/public_html/jumanamanna.com/ndxz-studio/lib/media.php:214) in /home/apiweb/public_html/jumanamanna.com/ndxz-studio/lib/template.php on line 65
+[28-Aug-2012 21:49:52 UTC] PHP Warning:  POST Content-Length of 215879081 bytes exceeds the limit of 8388608 bytes in Unknown on line 0
+[28-Aug-2012 21:50:10 UTC] PHP Warning:  POST Content-Length of 215879081 bytes exceeds the limit of 8388608 bytes in Unknown on line 0
+[28-Aug-2012 23:39:10 UTC] PHP Warning:  POST Content-Length of 12736449 bytes exceeds the limit of 8388608 bytes in Unknown on line 0
+[28-Aug-2012 23:39:47 UTC] PHP Warning:  POST Content-Length of 12736449 bytes exceeds the limit of 8388608 bytes in Unknown on line 0
+[15-Apr-2013 15:03:57 UTC] PHP Warning:  POST Content-Length of 215879081 bytes exceeds the limit of 8388608 bytes in Unknown on line 0
