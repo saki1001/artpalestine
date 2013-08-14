@@ -17,8 +17,10 @@
                 
                 <div id="articles">
                     
-                    <div class="article">
+                    <div id="sidebar" class="article-preview">
                         <h2>Showing results<br/> for "<?php the_search_query() ?>"</h2>
+                        
+                        <div class="border"></div>
                     </div>
         <?php
                     while ( have_posts() ) : the_post();
@@ -28,9 +30,10 @@
                     
                 </div>
                 
-                <div class="pagination">
-                    <div id="next-page"><?php next_posts_link('Next &rarr;','') ?></div>
-                </div>
+        <?php
+                get_template_part('pagination');
+        ?>
+        
         <?php
             else :
                 

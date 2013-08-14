@@ -29,6 +29,10 @@
             </div>
             
     <?php
+            get_template_part('pagination');
+    ?>
+            
+    <?php
         else :
             // Content Not Found Template
             include('content-not-found.php');

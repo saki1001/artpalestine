@@ -7,7 +7,7 @@
  */
 ?>
 
-<a href="<?php the_permalink(); ?>" class="article" >
+<a href="<?php the_permalink(); ?>" class="article-preview" >
     <div class="caption">
         <h4 class="post-title">
             <?php the_title(); ?>
@@ -28,12 +28,12 @@
         <figure class="post-thumb" style="height:<?php echo $thumbnail[2] . 'px'; ?>;">
             <img src="<?php echo $thumbnail[0]; ?>" width="<?php echo $thumbnail[1]; ?>" height="<?php echo $thumbnail[2]; ?>" alt="<?php the_title(); ?>" />
         </figure>
-        <div class="border thin"></div>
     <?php
         } else {
-    ?>
-        <div class="border"></div>
-    <?php
+            // do nothing
         }
     ?>
+    
+    <div class="border"></div>
+    
 </a>

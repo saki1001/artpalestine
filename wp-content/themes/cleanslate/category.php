@@ -18,11 +18,7 @@
                 <div id="articles">
                 
         <?php
-                // if( is_category('resources') ) :
-                    get_sidebar('sub-categories');
-                // else :
-                //     get_sidebar('tag-cloud');
-                // endif;
+                get_sidebar('sub-categories');
                 
                 while ( have_posts() ) : the_post();
                     get_template_part('content-thumb', get_post_format() );
@@ -31,13 +27,12 @@
                     
                 </div>
                 
-                <div class="pagination">
-                    <div id="next-page"><?php next_posts_link('Next &rarr;','') ?></div>
-                </div>
+        <?php
+                get_template_part('pagination');
+        ?>
+                
         <?php
             else :
-                $sidebar = TRUE;
-                
                 // Content Not Found Template
                 include('content-not-found.php');
                 

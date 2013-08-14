@@ -66,7 +66,7 @@
                     $j(container).masonry({
                         columnWidth: 224,
                         gutter: 18,
-                        itemSelector: '.article'
+                        itemSelector: '.article-preview'
                     });
                     
                 });
@@ -91,13 +91,14 @@
             </div>
             
             <nav id="main-menu" role="navigation">
+                <div id="search">
+                    <?php get_search_form(); ?>
+                </div>
+                
                 <?php
                     // default menu
                     wp_nav_menu( array( 'theme_location' => 'primary' ) );
                 ?>
-                <div id="search">
-                    <?php get_search_form(); ?>
-                </div>
             </nav>
             
         </header>

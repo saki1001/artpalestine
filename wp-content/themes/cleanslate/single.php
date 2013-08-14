@@ -23,7 +23,7 @@
         else :
             // Content Not Found Template
             include('content-not-found.php');
-        
+            
         endif;
     
     ?>

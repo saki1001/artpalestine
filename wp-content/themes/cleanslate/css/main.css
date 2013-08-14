@@ -147,18 +147,18 @@ header h1 a {
 -------------------------------------------------------------- */
 #main-menu {
     display: block;
+    width: 600px;
     font-size: 1.8em;
     line-height: 1.2;
     float: right;
-    padding-top: 40px;
+    padding-top: 20px;
 }
 
 #main-menu .menu-main-container {
-    float: left;
+    float: right;
 }
 
 #main-menu #menu-main {
-    margin-right: 20px;
     float: right;
 }
 
@@ -249,20 +249,6 @@ header h1 a {
 
 /* General
 -------------------------------------------------------------- */
-#main #content article {
-    position: relative;
-}
-
-#main #content article .border {
-    width: 20px;
-    height: 20px;
-    background-color: #FAAAAA;
-    position: absolute;
-    top: -10px;
-    left: -10px;
-    z-index: 2;
-}
-
 #main h2 {
     font-size: 2.2em;
     line-height: 1.2;
@@ -277,10 +263,94 @@ header h1 a {
     color: #999999;
 }
 
+#main #content,
+#main #content #articles {
+    width: 100%;
+    position: relative;
+}
+
+#main #content .article-preview {
+    position: relative;
+}
+
+#main #content .border {
+    width: 10px;
+    height: 10px;
+    background-color: #CCCCCC;
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    z-index: 2;
+}
+
+body.single #main #content article .border {
+    width: 20px;
+    height: 20px;
+    background-color: #FAAAAA;
+    top: -10px;
+    left: -10px;
+}
+
+#main #content #description.article-preview .border,
+#main #content #sidebar.article-preview .border {
+    background-color: #FAAAAA;
+}
+
+#main #content article,
+#main #content .article-preview {
+    padding-top: 12px;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    background-color: #FFFFFF;
+    border-right: solid 2px #CCCCCC;
+    border-bottom: solid 3px #CCCCCC;
+    border-bottom-right-radius: 10px;
+    word-wrap: break-word;
+    position: relative;
+    z-index: 20;
+}
+
+#main #content .article-preview {
+    width: 224px;
+}
+
+#main #content .article-preview h2,
+#main #content .article-preview h4,
+#main #content .article-preview ul,
+#main #content .article-preview p,
+#main #content .article-preview figure {
+    padding-left: 12px;
+    padding-right: 12px;
+}
+
+#main #content .article-preview h4 {
+    font-size: 1.8em;
+    line-height: 1.4;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+#main #content .article-preview p {
+    font-size: 1.2em;
+    line-height: 1.3;
+    margin-bottom: 5px;
+}
+
+#main #content #description.article-preview p {
+    font-size: 1.4em;
+    margin-bottom: 20px;
+}
+
+#main #content .article-preview figure,
+#main #content .article-preview figure img {
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
 /* Sidebar
 -------------------------------------------------------------- */
 #main #sidebar {
-    width: 200px;
+    width: 224px;
 }
 
 #main #sidebar ul {
@@ -301,103 +371,23 @@ header h1 a {
 }
 
 #sidebar.featured {
-    width: 200px;
     float: right;
 }
 
-#sidebar.featured .article {
-    padding-top: 12px;
+#sidebar.featured .article-preview {
+/*    padding-top: 12px;
     padding-bottom: 20px;
     margin-bottom: 20px;
     background-color: #FFFFFF;
     border-right: solid 2px #CCCCCC;
     border-bottom: solid 3px #CCCCCC;
-    border-bottom-right-radius: 10px;
+    border-bottom-right-radius: 10px;*/
     float: left;
 }
 
 /* Home
 -------------------------------------------------------------- */
-body.home #content {
-    margin: 0;
-    position: relative;
-}
 
-#main #content #articles {
-    width: 100%;
-    position: relative;
-}
-
-#main #content #articles .article {
-    width: 224px;
-    padding-top: 12px;
-    padding-bottom: 20px;
-    margin-bottom: 20px;
-    background-color: #FFFFFF;
-    border-right: solid 2px #CCCCCC;
-    border-bottom: solid 3px #CCCCCC;
-    border-bottom-right-radius: 10px;
-    word-wrap: break-word;
-    position: relative;
-    z-index: 20;
-}
-
-#main #content #articles .article h2,
-#main #content #articles .article h4,
-#main #content #articles .article ul,
-#main #content #articles .article p,
-#main #content #articles .article figure {
-    padding-left: 12px;
-    padding-right: 12px;
-}
-
-#main #content #articles .article h4 {
-    font-size: 1.8em;
-    line-height: 1.4;
-    font-weight: bold;
-    margin-bottom: 10px;
-}
-
-#main #content #articles .article p {
-    font-size: 1.2em;
-    line-height: 1.3;
-    margin-bottom: 5px;
-}
-
-#main #content #description.article p {
-    font-size: 1.4em;
-    margin-bottom: 20px;
-}
-
-#main #content #articles .article figure,
-#main #content #articles .article figure img {
-    margin-bottom: 0;
-    padding-bottom: 0;
-}
-
-#main #content #articles .article .border {
-    width: 10px;
-    height: 10px;
-    background-color: #CCCCCC;
-    position: absolute;
-    top: -5px;
-    left: -5px;
-    z-index: -1;
-/*    margin-top: 15px;*/
-/*    border-bottom: solid 4px #DC143C;*/
-/*    border-bottom: solid 4px #CCCCCC;*/
-}
-
-#main #content #articles #description.article .border,
-#main #content #articles #sidebar.article .border {
-    background-color: #FAAAAA;
-}
-
-#main #content #articles .article .border.thin {
-    margin-top: 0;
-/*    border-bottom: dashed 2px #00BFFF;*/
-/*    border-bottom: solid 4px #CCCCCC;*/
-}
 
 /* Page Template
 -------------------------------------------------------------- */
@@ -464,19 +454,6 @@ body.page #content figcaption {
 }
 
 
-/* Pagination
--------------------------------------------------------------- */
-#content .list-footer {
-    width: 100%;
-    font-size: 1.6em;
-    line-height: 1.2;
-}
-
-#content .list-footer .current {
-    color:#006699;
-}
-
-
 /* Single Post General
 -------------------------------------------------------------- */
 body.single #content {
@@ -484,8 +461,8 @@ body.single #content {
 }
 
 body.single #content article {
-    width: 640px;
-    padding: 20px 30px 50px;
+    width: 620px;
+    padding: 20px 26px 50px;
     margin-right: 48px;
     background-color: #FFFFFF;
     border-bottom-right-radius: 20px;
@@ -518,178 +495,30 @@ body.single #content ul li {
     margin-bottom: 10px;
 }
 
+/* Pagination
+-------------------------------------------------------------- */
+#content .pagination {
+    width: 100%;
+    margin-top: 30px;
+    font-size: 2em;
+    line-height: 1.2;
+}
+
+#content .pagination .prev {
+    margin-right: 20px;
+}
+
+#content .pagination .next {
+    margin-left: 20px;
+}
+
+#content .pagination .current {
+    color:#006699;
+}
+
 
 /* Content No Found
 -------------------------------------------------------------- */
 #content .not-found {
     font-size: 1.6em;
-}
-
-/* Content
--------------------------------------------------------------- */
-
-.sticky {
-}
-.entry-meta {
-    clear: both;
-    display: block;
-}
-.single-author .entry-meta .byline {
-    display: none;
-}
-#content nav {
-    display: block;
-    overflow: hidden;
-}
-#content nav .nav-previous {
-    float: left;
-    width: 50%;
-}
-#content nav .nav-next {
-    float: right;
-    text-align: right;
-    width: 50%;
-}
-#content #nav-above {
-    display: none;
-}
-.paged #content #nav-above,
-.single #content #nav-above {
-    display: block;
-}
-#nav-below {
-    margin: 1em 0 0;
-}
-.page-link {
-    clear: both;
-    margin: 0 0 1em;
-}
-.page .edit-link {
-    clear: both;
-    display: block;
-    font-size: 1.4em;
-}
-
-/* 404 page */
-.error404 .widget {
-    float: left;
-    width: 33%;
-}
-.error404 .widget .widgettitle,
-.error404 .widget ul {
-    margin-right: 1em;
-}
-.error404 .widget_tag_cloud {
-    clear: both;
-    float: none;
-    width: 100%;
-}
-
-
-/* Image Attachments */
-.image-attachment div.entry-meta {
-    float: left;
-}
-.image-attachment nav {
-    float: right;
-    margin: 0 0 1em 0;
-}
-.image-attachment .entry-content {
-    clear: both;
-}
-.image-attachment .entry-content .entry-attachment {
-    background: #eee;
-    margin: 0 0 1em;
-    padding: 1em;
-    text-align: center;
-}
-.image-attachment .entry-content .attachment {
-    display: block;
-    margin: 0 auto;
-    text-align: center;
-}
-
-/* Aside Posts */
-.format-aside .entry-header {
-    display: none;
-}
-.single .format-aside .entry-header {
-    display: block;
-}
-.format-aside .entry-content,
-.format-aside .entry-summary {
-    padding-top: 1em;
-}
-.single .format-aside .entry-content,
-.single .format-aside .entry-summary {
-    padding-top: 0;
-}
-
-/* Gallery Posts */
-.format-gallery .gallery-thumb {
-    float: left;
-    margin: 0 1em 0 0;
-}
-
-/* Image Posts */
-.format-image .entry-header {
-    display: none;
-}
-.single .format-image .entry-header {
-    display: block;
-}
-.format-image .entry-content,
-.format-image .entry-summary {
-    padding-top: 1em;
-}
-.single .format-image .entry-content,
-.single .format-image .entry-summary {
-    padding-top: 0;
-}
-
-
-/* Images
--------------------------------------------------------------- */
-
-a img {
-    border: none;
-}
-p img {
-    margin-bottom: 0.5em; /* a small bottom margin prevents content floating under images */
-}
-/*
-Resize images to fit the main content area.
-- Applies only to images uploaded via WordPress by targeting size-* classes.
-- Other images will be left alone. Use "size-auto" class to apply to other images.
-*/
-img.size-auto,
-img.size-full,
-img.size-large,
-img.size-medium,
-.attachment img,
-.widget-area img,
-.wp-caption {
-    max-width: 100%; /* When images are too wide for containing element, force them to fit. */
-    height: auto; /* Override height to match resized width for correct aspect ratio. */
-}
-img.alignleft {
-    margin-right: 1em;
-}
-img.alignright {
-    margin-left: 1em;
-}
-.wp-caption {
-    padding: .5em;
-    text-align: center;
-}
-.wp-caption img {
-    margin: .25em;
-}
-.wp-caption .wp-caption-text {
-    margin: .5em;
-}
-.gallery-caption {
-}
-.wp-smiley {
-    margin: 0;
 }

@@ -28,8 +28,8 @@
             $class = "class='current'";
         endif;
 ?>
-        <div id="sidebar" class="article">
-            
+        <div id="sidebar" class="article-preview">
+             
             <h2>
             <?php
                 if( is_category('resources') ) :

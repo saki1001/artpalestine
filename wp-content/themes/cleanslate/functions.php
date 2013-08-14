@@ -139,9 +139,6 @@ function get_category_tags($args) {
 // Adding Thumbnails
 add_theme_support( 'post-thumbnails' );
 
-// Add "last" class to last post in loop
-add_filter('post_class', 'my_post_class');
-
 function custom_excerpt_length( $length ) {
 	return 25;
 }
@@ -149,9 +146,14 @@ add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
 
 function my_post_class($classes){
     global $wp_query;
-    if(($wp_query->current_post+1) == $wp_query->post_count) $classes[] = 'last';
+    if( ($wp_query->current_post+1) == $wp_query->post_count ) $classes[] = 'last';
+    
+    if( is_single() ) $classes[] = 'article';
+    
     return $classes;
 }
+// Add "last" class to last post in loop
+add_filter('post_class', 'my_post_class');
 
 // Prevent from adding link to inserted imgaes
 update_option('image_default_link_type','none');

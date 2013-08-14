@@ -13,7 +13,7 @@
         
         <div id="articles">
         
-            <div id="description" class="article">
+            <div id="description" class="article-preview">
                 <p>Art Palestine International is a New York-based cultural organization dedicated to Palestinian contemporary art. We collaborate with museums, galleries, and non-profits to produce art exhibitions, events, and publications.</p>
                 <p>This blog is a research tool that allows us to chart our research and invite others along on the journey.</p>
                 
@@ -32,31 +32,8 @@
         </div>
         
         <?php
-            $args = array(
-                'base'         => '%_%',
-                'format'       => '?page=%#%',
-                'total'        => 1,
-                'current'      => 0,
-                'show_all'     => False,
-                'end_size'     => 1,
-                'mid_size'     => 2,
-                'prev_next'    => True,
-                'prev_text'    => __('« Previous'),
-                'next_text'    => __('Next »'),
-                'type'         => 'plain',
-                'add_args'     => False,
-                'add_fragment' => ''
-            );
+                get_template_part('pagination');
         ?>
-        
-        <div class="pagination">
-            <?php
-                wp_link_pages();
-                _log($wp_query->found_posts);
-            ?>
-            
-            <div id="next-page"><?php next_posts_link('Next &rarr;','') ?></div>
-        </div>
         
         <?php
             else :
