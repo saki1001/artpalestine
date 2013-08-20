@@ -273,7 +273,7 @@ header h1 a {
     position: relative;
 }
 
-#main #content .border {
+#main #content .article-preview .border {
     width: 10px;
     height: 10px;
     background-color: #CCCCCC;
@@ -283,12 +283,14 @@ header h1 a {
     z-index: 2;
 }
 
-body.single #main #content article .border {
+#main #content article .border {
     width: 20px;
     height: 20px;
     background-color: #FAAAAA;
+    position: absolute;
     top: -10px;
     left: -10px;
+    z-index: 2;
 }
 
 #main #content #description.article-preview .border,
@@ -297,6 +299,11 @@ body.single #main #content article .border {
 }
 
 #main #content article,
+#main #content .article-preview {
+    position: relative;
+    z-index: 20;
+}
+
 #main #content .article-preview {
     padding-top: 12px;
     padding-bottom: 20px;
@@ -375,13 +382,6 @@ body.single #main #content article .border {
 }
 
 #sidebar.featured .article-preview {
-/*    padding-top: 12px;
-    padding-bottom: 20px;
-    margin-bottom: 20px;
-    background-color: #FFFFFF;
-    border-right: solid 2px #CCCCCC;
-    border-bottom: solid 3px #CCCCCC;
-    border-bottom-right-radius: 10px;*/
     float: left;
 }
 
