@@ -50,23 +50,25 @@
                 var $j = jQuery.noConflict();
                 var templateDirectoryUrl = '<?php echo get_template_directory_uri(); ?>';
             </script>
-            <!-- <script src="<?php echo get_template_directory_uri(); ?>/js/modernizr.js" type="text/javascript"></script> -->
-            <script src="<?php echo get_template_directory_uri(); ?>/js/masonry.js" type="text/javascript"></script>
             
             <?php
                 if( is_home() || is_category() || is_tag() || is_search() ) {
             ?>
+            <script src="<?php echo get_template_directory_uri(); ?>/js/imagesLoaded.js" type="text/javascript"></script>
+            <script src="<?php echo get_template_directory_uri(); ?>/js/masonry.js" type="text/javascript"></script>
             <script type="text/javascript">
                 
                 $j(document).ready( function() {
                     
                     var container = $j('#articles');
                     
-                    // initialize
-                    $j(container).masonry({
-                        columnWidth: 224,
-                        gutter: 18,
-                        itemSelector: '.article-preview'
+                    // initialize after imagesLoaded plugin
+                    $j(container).imagesLoaded( function() {
+                        $j(container).masonry({
+                            columnWidth: 224,
+                            gutter: 18,
+                            itemSelector: '.article-preview'
+                        });
                     });
                     
                 });
